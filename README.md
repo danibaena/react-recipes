@@ -1,1 +1,1 @@
-react-recipes
+**Create a basic CRUD SPA for recipes with React.**
