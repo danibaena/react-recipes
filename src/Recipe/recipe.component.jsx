@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
+import { browserHistory } from 'react-router';
 
 class Recipe extends Component {
     handleRedirect(){
@@ -21,12 +22,12 @@ class Recipe extends Component {
         });
         return (
             <div>
-                <h1>Recipes list</h1>
+                <h1>Recipes</h1>
                 <div className="list-group">
                     {recipeNode}
                 </div>
                 <div className="col-md-12">
-                    <button className="btn btn-default" onClick={this.handleRedirect.bind(this)}>Create Recipe</button>
+                    <button className="btn btn-default" onClick={this.handleRedirect.bind(this)}>Create recipe</button>
                 </div>
             </div>
         );

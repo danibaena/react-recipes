@@ -3,7 +3,7 @@ import { browserHistory } from 'react-router';
 
 class RecipeDetail extends Component {
     handleRedirect(){
-        browserHistory.push('/recipes');
+        browserHistory.push('/');
     }
     render(){
         const Recipes = this.props.route.data;
@@ -16,28 +16,25 @@ class RecipeDetail extends Component {
 
         return (
             <div>
-                <h1>{recipe[0].name}</h1>
+                <h1>Recipe details for: {recipe[0].name}</h1>
                 <div className="row">
-                    <div className="col-sm-6 col-md-4">
-                        <div className="thumbnail">
-                            <img src={recipe[0].media} alt={recipe[0].name} />
-                        </div>
-                    </div>
-                    <div className="col-sm-6 col-md-4">
-                       <ul>
-                           <li><strong>Model</strong>: {recipe[0].model}</li>
-                           <li><strong>Make</strong>: {recipe[0].make}</li>
-                           <li><strong>Year</strong>: {recipe[0].year}</li>
-                           <li><strong>Price</strong>: {recipe[0].price}</li>
+                    <div className="col-sm-6 col-md-4 list-group">
+                    <h2>Ingredients / Quantity</h2>
+                        <ul>
+                            <li>{recipe[0].id}</li>
                        </ul>
-                       <ol>
-                            <li><strong>Steps</strong>: {recipe[0].steps}</li>
-                       </ol>
+                    </div>
+                    <div className="col-sm-6 col-md-4 list-group">
+                        <h2>Steps</h2>
+                        <ul>
+                           <li>{recipe[0].id}</li>
+                        </ul>
                     </div>
                     <div className="col-md-12">
                         <button className="btn btn-default" onClick={this.handleRedirect.bind(this)}>Go to Recipes</button>
                     </div>
                 </div>
+
             </div>
         );
     }
