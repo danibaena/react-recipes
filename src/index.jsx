@@ -14,11 +14,11 @@ const data = [
         name: 'Alioli',
         ingredients: [
             {
-                name: 'Ajo',
-                quantity: 'Dos cabezas'
+                name: 'Garlic',
+                quantity: '2 heads'
             },
             {
-                name: 'Aceite',
+                name: 'Oil',
                 quantity: '100 ml'
             }
         ],
@@ -26,6 +26,42 @@ const data = [
             'Cut the garlic',
             'Put the garlic in a bowl with oil',
             'Mix it up with a Moulinex',
+            'Serve & eat!'
+        ]
+    },
+    {
+        id: 2,
+        name: 'Gazpacho',
+        ingredients: [
+            {
+                name: 'Tomato',
+                quantity: 'Plenty'
+            },
+            {
+                name: 'Oil',
+                quantity: 'All of it'
+            },
+            {
+                name: 'Vinager',
+                quantity: 'Safe quantity'
+            },
+            {
+                name: 'Salt',
+                quantity: 'Just the tip'
+            },
+            {
+                name: 'Pepper',
+                quantity: 'Big one'
+            },
+            {
+                name: 'Onions',
+                quantity: 'Enough to make you cry'
+            }
+        ],
+        steps: [
+            'Cut and clean the vegetables',
+            'Use an unicorn horn to perform the magic',
+            'Let it refresh in the fridge for about 2 hours',
             'Serve & eat!'
         ]
     }
@@ -36,7 +72,7 @@ render(
         <Route component={Main}>
             <Route path="/" component={Recipe} data={data}/>
             <Route path="/recipes/:id" component={RecipeDetail} data={data}/>
-            <Route path="/create-recipe" component={CreateRecipe}/>
+            <Route path="/create-recipe" component={CreateRecipe} data={data}/>
         </Route>
     </Router>,
     document.getElementById('container')

@@ -23,11 +23,17 @@ class Recipe extends Component {
         return (
             <div>
                 <h1>Recipes</h1>
-                <div className="list-group">
-                    {recipeNode}
-                </div>
-                <div className="col-md-12">
-                    <button className="btn btn-default" onClick={this.handleRedirect.bind(this)}>Create recipe</button>
+                    <div className="row">
+                    <div className="panel panel-default">
+                            <div className="panel-body">
+                                <div className="col-md-8 list-group">
+                                    {recipeNode}
+                                </div>
+                            </div>
+                         </div>
+                    <div className="col-md-8">
+                        <button className="btn btn-default" onClick={this.handleRedirect.bind(this)}>Create recipe</button>
+                    </div>
                 </div>
             </div>
         );
