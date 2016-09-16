@@ -36,14 +36,14 @@ class CreateRecipe extends Component {
                 	<div className="col-sm-6 col-md-4 form-group">
 						<div className="panel panel-default">
                             <div className="panel-body">
-                            	HOLA
+                            	Ingredients
                             </div>
                          </div>
 					</div>
                     <div className="col-sm-6 col-md-4 form-group">
                     	<div className="panel panel-default">
                             <div className="panel-body">
-                            	HOLA
+                            	Steps
                             </div>
                         </div>
                     </div>
